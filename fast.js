@@ -105,6 +105,7 @@ var writeLine = function(writer, obj, callback) {
   });
 };
 
+// TODO: download NT file!
 // function download(config, dir, writer, callback) {
 // }
 
@@ -143,28 +144,6 @@ function convert(config, dir, writer, callback) {
     .done(function() {
       callback();
     });
-
-
-
-    //
-    // var pits = ndjsonItems
-    //   .fork()
-    //   .where({type: 'pit'})
-    //   .pluck('data')
-    //   .map(JSON.stringify)
-    //   .intersperse('\n');
-    //
-    // var relations = ndjsonItems
-    //   .observe()
-    //   .where({type: 'relation'})
-    //   .pluck('data')
-    //   .map(JSON.stringify)
-    //   .intersperse('\n');
-    //
-    // pits.pipe(pitsFile);
-    // relations.pipe(relationsFile);
-    //
-
 }
 
 // ==================================== API ====================================
