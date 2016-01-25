@@ -134,7 +134,6 @@ function convert(config, dir, writer, callback) {
     })
     .map(ndjson)
     .flatten()
-
     .map(H.curry(writeLine, writer))
     .nfcall([])
     .series()
